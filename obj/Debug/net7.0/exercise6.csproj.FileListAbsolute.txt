@@ -1,0 +1,15 @@
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\bin\Debug\net7.0\exercise6.exe
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\bin\Debug\net7.0\exercise6.deps.json
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\bin\Debug\net7.0\exercise6.runtimeconfig.json
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\bin\Debug\net7.0\exercise6.dll
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\bin\Debug\net7.0\exercise6.pdb
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.csproj.AssemblyReference.cache
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.AssemblyInfoInputs.cache
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.AssemblyInfo.cs
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.csproj.CoreCompileInputs.cache
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.dll
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\refint\exercise6.dll
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.pdb
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\exercise6.genruntimeconfig.cache
+C:\Users\daryl5946\OneDrive - Willis Towers Watson\Desktop\practice\exercise6\obj\Debug\net7.0\ref\exercise6.dll
