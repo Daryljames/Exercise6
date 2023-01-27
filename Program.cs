@@ -83,61 +83,69 @@ Program should be able to loop until user enters the option “quit”
                             System.Console.Write("Enter Number: ");
                             int empChoice = int.Parse(Console.ReadLine());
 
-                            if (empChoice == 1)
+                            bool selectionAddMenu = true;
+
+                            while (selectionAddMenu)
                             {
-                                System.Console.WriteLine("Enter first name");
-                                string firstName = Console.ReadLine();
+                                if (empChoice == 1)
+                                {
+                                    System.Console.WriteLine("Enter first name");
+                                    string firstName = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter last name");
-                                string lastName = Console.ReadLine();
+                                    System.Console.WriteLine("Enter last name");
+                                    string lastName = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter employee number name");
-                                string employeeNumber = Console.ReadLine();
+                                    System.Console.WriteLine("Enter employee number name");
+                                    string employeeNumber = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter base salary name");
-                                float baseSalary = float.Parse(Console.ReadLine());
+                                    System.Console.WriteLine("Enter base salary name");
+                                    float baseSalary = float.Parse(Console.ReadLine());
 
-                                int id = employeesList.Count() + 1;
-                                Employee emp = new Employee(id, firstName, lastName, employeeNumber, baseSalary);
+                                    int id = employeesList.Count() + 1;
+                                    Employee emp = new Employee(id, firstName, lastName, employeeNumber, baseSalary);
 
-                                emp = employeeService.Save(emp);
-                                System.Console.WriteLine("Employee " + emp.FirstName + " " + emp.LastName + " added");
-                                displayAddMenu = false;
+                                    emp = employeeService.Save(emp);
+                                    System.Console.WriteLine("Employee " + emp.FirstName + " " + emp.LastName + " added");
+                                    selectionAddMenu = false;
 
-                            }
-                            else if (empChoice == 2)
-                            {
-                                System.Console.WriteLine("Enter first name");
-                                string firstName = Console.ReadLine();
+                                }
+                                else if (empChoice == 2)
+                                {
+                                    System.Console.WriteLine("Enter first name");
+                                    string firstName = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter last name");
-                                string lastName = Console.ReadLine();
+                                    System.Console.WriteLine("Enter last name");
+                                    string lastName = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter employee number");
-                                string employeeNumber = Console.ReadLine();
+                                    System.Console.WriteLine("Enter employee number");
+                                    string employeeNumber = Console.ReadLine();
 
-                                System.Console.WriteLine("Enter base salary");
-                                float baseSalary = float.Parse(Console.ReadLine());
+                                    System.Console.WriteLine("Enter base salary");
+                                    float baseSalary = float.Parse(Console.ReadLine());
 
-                                System.Console.WriteLine("Enter commission");
-                                float commission = float.Parse(Console.ReadLine());
+                                    System.Console.WriteLine("Enter commission");
+                                    float commission = float.Parse(Console.ReadLine());
 
-                                int id = employeesList.Count() + 1;
-                                SalesEmployee emp = new SalesEmployee(id, firstName, lastName, employeeNumber, baseSalary, commission);
+                                    int id = employeesList.Count() + 1;
+                                    SalesEmployee emp = new SalesEmployee(id, firstName, lastName, employeeNumber, baseSalary, commission);
 
-                                emp = (SalesEmployee)employeeService.Save(emp);
-                                System.Console.WriteLine("Sales Employee " + emp.FirstName + " " + emp.LastName + " added");
-                                displayAddMenu = false;
-                            }
-                            else if (empChoice == 3)
-                            {
-                                System.Console.WriteLine("Going back to main menu");
-                                displayAddMenu = false;
-                            }
-                            else
-                            {
-                                System.Console.WriteLine("Please enter only one from the above numbers");
-                                // displayAddMenu = false;
+                                    emp = (SalesEmployee)employeeService.Save(emp);
+                                    System.Console.WriteLine("Sales Employee " + emp.FirstName + " " + emp.LastName + " added");
+                                    selectionAddMenu = false;
+                                }
+                                else if (empChoice == 3)
+                                {
+                                    System.Console.WriteLine("Going back to main menu");
+                                    selectionAddMenu = false;
+                                    selection = false;
+                                    displayAddMenu = false;
+                                }
+                                else
+                                {
+                                    System.Console.WriteLine("Please enter only one from the above numbers");
+                                    selectionAddMenu = false;
+                                    // displayAddMenu = false;
+                                }
                             }
                         }
 
