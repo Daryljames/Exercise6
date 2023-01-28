@@ -183,7 +183,17 @@ Program should be able to loop until user enters the option “quit”
 
                         Employee emp = employeeService.FindById(id);
 
-                        if (emp != null)
+                        if (emp == null)
+                        {
+                            System.Console.WriteLine("No Employee has that ID. Returning to main menu");
+                            selection = false;
+                        }
+                        else if (emp.GetType() == typeof(Employee))
+                        {
+                            System.Console.WriteLine("Employee is not from Sales. Returning to main menu");
+                            selection = false;
+                        }
+                        else if (emp != null)
                         {
                             System.Console.Write("Enter name of sale: ");
                             string nameSale = Console.ReadLine();
@@ -194,14 +204,16 @@ Program should be able to loop until user enters the option “quit”
 
                             employeeService.AddSale(emp, sale);
 
-                            selection = false;
-                        }
-                        else
-                        {
-                            System.Console.WriteLine("No Employee has that ID. Please try again");
-                            selection = false;
+                            System.Console.WriteLine("Successfully added. Returning to main menu");
 
+                            selection = false;
                         }
+                    }
+                    else if (choice == 5)
+                    {
+                        System.Console.WriteLine("Logging out");
+                        displayMenu = false;
+                        selection = false;
                     }
                 }
             }
