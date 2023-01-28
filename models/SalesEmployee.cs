@@ -20,5 +20,10 @@ namespace Exercise6.Models
             }
             return BaseSalary + Commission * totalSales;
         }
+
+        public void AddSale(Sale s)
+        {
+            Sales.Add(s);
+        }
     }
 }

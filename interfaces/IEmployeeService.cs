@@ -24,5 +24,8 @@ namespace Exercise6.Interfaces
         public void AddSale(Employee e, Sale s);
 
         public Employee FindById(int id);
+
+        public SalesEmployee FindSalesEmpById(int id);
+
     }
 }

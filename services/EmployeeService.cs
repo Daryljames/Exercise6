@@ -19,7 +19,12 @@ namespace Exercise6.Services
 
         public void AddSale(Employee e, Sale s)
         {
-            throw new NotImplementedException();
+            // SalesEmployee salesEmp = salesEmployees.SingleOrDefault(x => x == e);
+            Employee salesEmp = employees.SingleOrDefault(x => x == e);
+
+            SalesEmployee emp = (SalesEmployee)salesEmp;
+
+            emp.AddSale(s);
         }
 
         public void Delete(Employee e)
@@ -47,6 +52,11 @@ namespace Exercise6.Services
         public Employee FindById(int id)
         {
             Employee emp = employees.SingleOrDefault(x => x.Id == id);
+            return emp;
+        }
+        public SalesEmployee FindSalesEmpById(int id)
+        {
+            SalesEmployee emp = salesEmployees.SingleOrDefault(x => x.Id == id);
             return emp;
         }
     }

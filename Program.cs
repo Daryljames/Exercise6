@@ -162,10 +162,46 @@ Program should be able to loop until user enters the option “quit”
                         {
                             employeeService.Delete(emp);
                             System.Console.WriteLine("Employee with ID " + emp.Id + " has been deleted");
+                            selection = false;
+
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("No Employee has that ID. Please try again");
+                            selection = false;
+
                         }
 
 
-                        selection = false;
+                    }
+                    else if (choice == 4)
+                    {
+                        System.Console.WriteLine("PLease Select a Sales Employee");
+                        System.Console.Write("Enter ID of Sales Employee: ");
+
+                        int id = int.Parse(Console.ReadLine());
+
+                        Employee emp = employeeService.FindById(id);
+
+                        if (emp != null)
+                        {
+                            System.Console.Write("Enter name of sale: ");
+                            string nameSale = Console.ReadLine();
+                            System.Console.Write("Enter amount of sale: ");
+                            float amountSale = float.Parse(Console.ReadLine());
+
+                            Sale sale = new Sale(nameSale, amountSale);
+
+                            employeeService.AddSale(emp, sale);
+
+                            selection = false;
+                        }
+                        else
+                        {
+                            System.Console.WriteLine("No Employee has that ID. Please try again");
+                            selection = false;
+
+                        }
                     }
                 }
             }
